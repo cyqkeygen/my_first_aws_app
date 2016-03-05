@@ -41,6 +41,7 @@ group :development do
 
   # Auto deploy
   gem "capistrano", "~> 3.4"
+  gem 'capistrano-rails', '~> 1.1'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
