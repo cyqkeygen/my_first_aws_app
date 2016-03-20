@@ -5,7 +5,7 @@ set :repository, "https://github.com/cyqkeygen/my_first_aws_app.git"
 set :deploy_to, "/home/ec2-user/production"
 set :scm, :git
 set :branch, "master"
-set :user, "root"
+set :user, "ec2-user"
 set :rails_env, "production"      # If the environment differs from the stage name
 set :deploy_via, :copy
 set :keep_releases, 5
@@ -16,9 +16,9 @@ set :keep_releases, 5
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server '52.87.226.22', user: 'root', roles: %w{app db web}, my_property: :my_value
-server '52.87.226.22', user: 'root', roles: %w{app web}, other_property: :other_value
-server '52.87.226.22', user: 'root', roles: %w{db}
+server '52.87.226.22', user: 'ec2-user', roles: %w{app db web}, my_property: :my_value
+server '52.87.226.22', user: 'ec2-user', roles: %w{app web}, other_property: :other_value
+server '52.87.226.22', user: 'ec2-user', roles: %w{db}
 
 
 
