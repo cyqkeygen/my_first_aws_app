@@ -1,11 +1,24 @@
+set :stage, :production
+set :use_sudo, false
+set :application, "My Test App"
+set :repository, "https://github.com/cyqkeygen/my_first_aws_app.git"
+set :deploy_to, "/home/ec2-user/production"
+set :scm, :git
+set :branch, "master"
+set :user, "ec2-user"
+set :rails_env, "production"      # If the environment differs from the stage name
+set :deploy_via, :copy
+set :keep_releases, 5
+default_run_options[:pty] = true
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-# server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
-# server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
-# server 'db.example.com', user: 'deploy', roles: %w{db}
+server '52.87.226.22', user: 'c2-user', roles: %w{app db web}, my_property: :my_value
+server '52.87.226.22', user: 'c2-user', roles: %w{app web}, other_property: :other_value
+server '52.87.226.22', user: 'c2-user', roles: %w{db}
 
 
 
