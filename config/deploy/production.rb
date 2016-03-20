@@ -9,6 +9,7 @@ set :user, "ec2-user"
 set :rails_env, "production"      # If the environment differs from the stage name
 set :deploy_via, :copy
 set :keep_releases, 5
+set :ssh_options, {config: false}
 # default_run_options[:pty] = true
 
 # server-based syntax

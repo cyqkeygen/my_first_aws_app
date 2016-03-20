@@ -43,6 +43,7 @@ group :development do
   gem "capistrano", "~> 3.4"
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rvm'
+  gem 'net-ssh', '=2.7.0'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
