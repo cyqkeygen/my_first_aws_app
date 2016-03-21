@@ -3,7 +3,7 @@ set :use_sudo, false
 set :application, "My Test App"
 set :repository, "https://github.com/cyqkeygen/my_first_aws_app.git"
 set :scm, :git
-set :deploy_to, "/home/ec2-user/production"
+set :deploy_to, "/var/www/rails_app"
 set :branch, "master"
 set :user, "ec2-user"
 set :rails_env, "production"      # If the environment differs from the stage name
@@ -67,13 +67,13 @@ server '52.87.226.22', user: 'ec2-user', roles: %w{db}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-server '52.87.226.22',
-  user: 'ec2-user',
-  roles: %w{web app db},
-  ssh_options: {
-    user: 'ec2-user', # overrides user setting above
-    keys: %w(/home/user_name/.ssh/id_rsa),
-    forward_agent: false,
-    auth_methods: %w(publickey password)
-    # password: 'please use keys'
-  }
+# server '52.87.226.22',
+#   user: 'ec2-user',
+#   roles: %w{web app db},
+#   ssh_options: {
+#     user: 'ec2-user', # overrides user setting above
+#     keys: %w(/home/user_name/.ssh/id_rsa),
+#     forward_agent: false,
+#     auth_methods: %w(publickey password)
+#     # password: 'please use keys'
+#   }
