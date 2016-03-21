@@ -10,6 +10,8 @@ set :rails_env, "production"      # If the environment differs from the stage na
 set :deploy_via, :copy
 set :keep_releases, 5
 set :pty, false
+set :rvm_type, :auto 
+set :rvm_ruby_version, 'default'      # Defaults to: 'default'
 
 # set :ssh_options, {config: false}
 # default_run_options[:pty] = true
