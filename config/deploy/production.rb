@@ -2,14 +2,16 @@ set :stage, :production
 set :use_sudo, false
 set :application, "My Test App"
 set :repository, "https://github.com/cyqkeygen/my_first_aws_app.git"
-set :deploy_to, "/home/ec2-user/production"
 set :scm, :git
+set :deploy_to, "/home/ec2-user/production"
 set :branch, "master"
 set :user, "ec2-user"
 set :rails_env, "production"      # If the environment differs from the stage name
 set :deploy_via, :copy
 set :keep_releases, 5
-set :ssh_options, {config: false}
+set :pty, false
+
+# set :ssh_options, {config: false}
 # default_run_options[:pty] = true
 
 # server-based syntax
